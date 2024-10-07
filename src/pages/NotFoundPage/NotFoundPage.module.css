@@ -1,0 +1,33 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.sectionUp {
+  display: flex;
+  margin-top: 22px;
+}
+.title {
+  color: #081f32;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Roboto;
+  font-size: 28px;
+  font-weight: 400;
+  margin-top: 16px;
+}
+.btnBack {
+  position: absolute;
+  left: 0;
+  top: 42px;
+}
+.sectionDown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  min-height: 70vh;
+}
+.img {
+}

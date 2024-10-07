@@ -1,0 +1,16 @@
+.button {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.btnText {
+  color: #000;
+  font-family: Karla;
+  font-size: 18px;
+  font-weight: 700;
+}
+@media (max-width: 600px) {
+.button {
+  scale: 0.8;
+}
+}

@@ -1,0 +1,43 @@
+.item {
+  display: flex;
+  max-width: 413px;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 9px 0 12px 16px;
+  border-bottom: 1px solid rgba(33, 33, 33, 0.08);
+}
+.itemtitle {
+  color: #081f32;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+.meaning {
+  color: #6e798c;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+}
+@media (max-width: 750px) {
+ .item {
+  padding: 8px 0 8px 12px;
+} 
+}
+@media (max-width: 550px) {
+  .item {
+  padding: 6px 0 6px 10px;
+}
+.itemtitle {
+  font-size: 13px;
+  }
+.meaning {
+  font-size: 13px;
+}
+}

@@ -1,0 +1,71 @@
+.gridWrapper {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 24px;
+  margin-bottom: 48px;
+  justify-items: center
+}
+.btn {
+  margin-top: 20px;
+}
+
+.button {
+  margin: 0 auto;
+  display: flex;
+  width: 154px;
+  height: 36px;
+  padding: 10px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  color: #2196f3;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  background: #f2f9fe;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 18px 0px rgba(0, 0, 0, 0.12), 0px 6px 10px 0px rgba(0, 0, 0, 0.14);
+  margin-bottom: 44px;
+}
+@media (max-width: 950px) {
+  .gridWrapper {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  }
+}
+@media (max-width: 750px) {
+  .gridWrapper {
+    margin-top: 30px;
+    margin-bottom: 38px;
+    grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
+  }
+}
+@media (max-width: 700px) {
+  .gridWrapper {
+    column-gap: 8px;
+    row-gap: 8px;
+  }
+  .button {
+    scale: 0.8;
+  }
+  .gridWrapper {
+    grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .button {
+    scale: 0.6;
+  }
+  .gridWrapper {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}

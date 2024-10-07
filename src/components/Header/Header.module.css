@@ -1,0 +1,70 @@
+.header {
+  padding: 5px 0;
+
+  background: #fff;
+  box-shadow: -2px 0px 8px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 46px;
+  height: 49px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.favorits, .currentUser {
+  color: #000;
+  text-align: center;
+  font-family: Karla, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+.heart {
+  max-width: 20px;
+}
+.btn {
+  color: #000;
+  text-align: center;
+  font-family: Karla, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+ 
+@media (max-width: 750px) {
+.btn {
+  font-size: 14px;
+}
+.logo {
+  max-width: 36px;
+  max-height: 39px;
+}
+}
+@media (max-width: 600px) {
+  .btn {
+  font-size: 12px;
+}
+.logo {
+  max-width: 28px;
+  max-height: 34px;
+}
+.heart {
+  max-width: 17px;
+}
+}
+@media (max-width: 420px) {
+.btn {
+  font-size: 10px;
+}
+.logo {
+  max-width: 20px;
+  max-height: 23px;
+}
+.favorits, .currentUser {
+  font-size: 14px;
+}
+.heart {
+  max-width: 15px;
+}
+}
