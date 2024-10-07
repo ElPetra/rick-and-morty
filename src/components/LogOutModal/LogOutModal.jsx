@@ -25,7 +25,7 @@ export const LogOutModal = ({ setIsOpenLogOutModal }) => {
     dispatch(logout());
     setIsOpenLogOutModal(false);
 
-    navigate("/Rick-and-Morty");
+    navigate("/rick-and-morty");
   };
 
   return (

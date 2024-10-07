@@ -2,7 +2,7 @@ import { Layout } from "../../layouts/Layout/Layout";
 import { ButtonBack } from "../../ui/ButtonBack/ButtonBack";
 import { useNavigate } from "react-router-dom";
 import s from "./NotFoundPage.module.css";
-import img from "./image/Rick-and-Morty.png";
+import img from "./image/rick-and-morty.png";
 
 export const NotFoundPage = () => {
   const navigate = useNavigate();

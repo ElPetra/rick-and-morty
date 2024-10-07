@@ -27,7 +27,7 @@ export const AuthPage = () => {
 
   useEffect(() => {
     if (isAuthorizated) {
-      navigate("/Rick-and-Morty");
+      navigate("/rick-and-morty");
     }
   }, [isAuthorizated]);
 

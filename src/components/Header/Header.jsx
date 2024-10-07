@@ -25,7 +25,7 @@ export const Header = () => {
   return (
     <header className={s.header}>
       <Container className={s.container}>
-        <Link to="/Rick-and-Morty">
+        <Link to="/rick-and-morty">
           <img className={s.logo} src={logo} alt="logo" />
         </Link>
 

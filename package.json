@@ -1,7 +1,7 @@
 {
-  "name": "Rick-and-Morty",
+  "name": "rick-and-morty",
   "version": "0.1.0",
-  "homepage": "https://elpetra.github.io/Rick-and-Morty/",
+  "homepage": "https://elpetra.github.io/rick-and-morty/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.7",
@@ -25,7 +25,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "gh-pages-clean": "npm run gh-pages-clean"
   },
   "eslintConfig": {
     "extends": [

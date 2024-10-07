@@ -17,11 +17,11 @@ const FavoritesPage = lazy(() =>
 
 export const router = createBrowserRouter([
   {
-    path: "/Rick-and-Morty",
+    path: "/rick-and-morty",
     element: (
       <ErrorBoundary
         FallbackComponent={ErrorFallback}
-        onReset={() => window.location.replace("/Rick-and-Morty")}
+        onReset={() => window.location.replace("/rick-and-morty")}
       >
         <HomePage />
       </ErrorBoundary>

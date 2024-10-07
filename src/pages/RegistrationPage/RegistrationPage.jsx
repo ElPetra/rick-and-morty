@@ -29,7 +29,7 @@ export const RegistrationPage = () => {
 
       const timer = setTimeout(() => {
         setSuccessRegistrationMessage(false);
-        navigate("/Rick-and-Morty");
+        navigate("/rick-and-morty");
       }, 1000);
 
       return () => {

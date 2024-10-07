@@ -7,7 +7,7 @@ import { useGetCharactersQuery } from "../../store/api/rickAndMortyApi";
 import { useDebounce } from "../../hooks/useDebounce";
 import s from "./HomePage.module.css";
 import image from "./images/RaM.webp";
-import imgError from "./images/Rick-and-Morty.png";
+import imgError from "./images/rick-and-morty.png";
 
 export const HomePage = () => {
   const [charactersData, setCharactersData] = useState([]);
@@ -60,7 +60,7 @@ export const HomePage = () => {
     <>
       <Layout className={s.container}>
         <button onClick={() => window.location.reload()}>
-          <img className={s.image} src={image} alt="Rick-and-Morty" />
+          <img className={s.image} src={image} alt="rick-and-morty" />
         </button>
 
         <div className={s.filters}>
