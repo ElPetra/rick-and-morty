@@ -22,7 +22,7 @@ const authSlice = createSlice({
       if (existingUser) {
         state.error = "Пользователь с таким email уже существует";
       } else {
-        const currentUser = { email, password, username };
+        const currentUser = { email, password, username};
         users.push(currentUser);
         localStorage.setItem("currentUser", JSON.stringify(currentUser));
         localStorage.setItem("users", JSON.stringify(users));
@@ -56,10 +56,10 @@ const authSlice = createSlice({
       state.isAuthorizated = false;
       state.error = null;
       localStorage.removeItem("currentUser");
-      localStorage.removeItem("favoritesData");
+      /*       localStorage.removeItem("favoritesData"); */
     },
   },
 });
 
-export const { register, login, logout } = authSlice.actions;
+export const { register, login, logout, updateFavorites } = authSlice.actions;
 export default authSlice.reducer;

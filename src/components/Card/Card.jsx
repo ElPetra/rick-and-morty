@@ -20,6 +20,7 @@ export const Card = ({ img, name, species, id, character }) => {
 
   const buttonHandler = () => {
     if (!currentUser) {
+      alert("Вы не авторизованы, нужно войти в аккаунт!");
       navigate("/login");
     } else {
       setIsFavorite(!isFavorite);
@@ -29,12 +30,11 @@ export const Card = ({ img, name, species, id, character }) => {
 
   return (
     <div className={s.card}>
-      {currentUser &&
-        (isFavorite ? (
-          <ButtonLike onClick={() => buttonHandler()} className={s.button} />
-        ) : (
-          <ButtonUnLike onClick={() => buttonHandler()} className={s.button} />
-        ))}
+      {isFavorite ? (
+        <ButtonLike onClick={() => buttonHandler()} className={s.button} />
+      ) : (
+        <ButtonUnLike onClick={() => buttonHandler()} className={s.button} />
+      )}
 
       <Link
         to={`/character/${id}`}

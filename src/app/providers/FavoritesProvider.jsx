@@ -1,18 +1,36 @@
 import { createContext, useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 export const FavoritesContext = createContext(null);
 
 export const FavoritesProvider = ({ children }) => {
+  const { currentUser } = useSelector((state) => state.auth);
 
-
-  const [favorites, setFavorites] = useState(() => {
-    const storedFavorites = localStorage.getItem("favoritesData");
-    return storedFavorites ? JSON.parse(storedFavorites) : [];
-  });
-
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    localStorage.setItem("favoritesData", JSON.stringify(favorites));
+    /* ЕСЛИ ПОЛЬЗОВАТЕЛЬ НЕ АВТОРИЗОВАН, СОСТОЯНИЕ FAVORITES = [] */
+    if (!currentUser) {
+      setFavorites([]);
+    } else {
+      /* ЕСЛИ ЮЗЕР АВТОРИЗОВАН, БЕРЕМ ИЗ LS */
+      const favoritesDataFromLS = localStorage.getItem(
+        `favoritesData|${currentUser.email}`
+      );
+      favoritesDataFromLS
+        ? setFavorites(JSON.parse(favoritesDataFromLS))
+        : setFavorites([]);
+    }
+  }, [currentUser]);
+
+  /* СОХРАНЯЕМ В LS */
+  useEffect(() => {
+    if (currentUser) {
+      localStorage.setItem(
+        `favoritesData|${currentUser.email}`,
+        JSON.stringify(favorites)
+      );
+    }
   }, [favorites]);
 
   const addToFavorites = (character) => {

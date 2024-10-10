@@ -64,3 +64,13 @@
   font-size: 18px;
   font-weight: 700;
 }
+@media (max-width: 600px) {
+  .modalContent {
+    scale: 0.8;
+  }
+}
+@media (max-width: 520px) {
+  .modalContent {
+    scale: 0.7;
+  }
+}
